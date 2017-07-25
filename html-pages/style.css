@@ -1,0 +1,80 @@
+/*----FONTS----*/
+
+@font-face {
+	font-family: Pacifico;
+	src: url("../public/fonts/Pacifico.ttf");
+}
+
+@font-face {
+	font-family: Raleway;
+	src: url('https://fonts.googleapis.com/css?family=Raleway');
+}
+
+/*---FORMATTING--*/
+
+* {
+	position: center;
+	font-family: Raleway;
+}
+
+.background {
+  background-color: #FFFFFF;
+  background-image: -webkit-linear-gradient(110deg, #7EDC95 50%, #FFFFFF 50%);
+}
+
+body {
+	background-color: #7EDC95;
+}
+
+.main {
+	display: flex;
+	height: 100vh;
+}
+
+.navigation {
+	display: flex;
+}
+
+.logo {
+	width: 20%;
+	/*background-color: black;*/
+	color: white;
+	text-align: left;
+}
+
+.avologo{
+	height: 50vh;
+	padding: 20px;
+}
+
+.links {
+	width: 80%;
+	/*background-color: yellow;*/
+	text-align: right;
+}
+
+.container {
+	/*background-color: pink;*/
+	width: 80%;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 30px;
+}
+
+.body {
+	width: 50%;
+	/*background-color: green;*/
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.button {
+	background-color: black;
+	color: white;
+	font-size: 16px;
+	border-style: solid;
+	border-color: black;
+}

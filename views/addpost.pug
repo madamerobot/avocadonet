@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+	head
+		meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0')
+		include navigation.pug
+		include references.pug
+		title Add A Post
+	body#bootstrap-overrides
+		header.intro-header(style="background-image: url('/img/avocadobg2-green.png')")
+			.container
+				.row
+					.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+						.site-heading
+							h1 Write a post
+							hr.small
+							form.col.s12(action='/addpost', method='POST', autocomplete='off' id='form')
+								label(for='name') What Do You Want To Say
+								br
+								br
+								input#name.validate(type='text', name='posting')
+								br
+								br
+								button.btn.btn-default#writepost(type="submit", name="submit") PUBLISH POST
+	include references_footer.pug

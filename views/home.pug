@@ -1,0 +1,33 @@
+doctype html
+html(lang='en')
+	head
+		meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0')
+		include navigation.pug
+		include references.pug
+		title Home
+	body#bootstrap-overrides
+		header.intro-header
+			.container
+				.row
+					.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+						.site-heading
+							p.headline THE <br> AVOCADO NET
+							span.meta.alert=message
+							hr.small
+							form#signin(action='/', method='POST', autocomplete='off')
+								label(for='username') YOUR NAME
+								br
+								input#name.validate(type='text', name='username', placeholder="Username")
+								br
+								br
+								label(for='password') YOUR PASSWORD
+								br
+								input#password.validate(type='password', name='password', placeholder="Password")
+								br
+								br
+								button.btn.btn-default#seepreview(type="submit", name="login") LOGIN
+							p You don't have an account yet?
+							a.btn.btn-default(href='/signup', role='button') Sign Up
+							p
+	include references_footer.pug

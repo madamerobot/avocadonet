@@ -1,0 +1,24 @@
+doctype html
+html
+head
+	// Navigation
+	nav.navbar.navbar-default.navbar-custom.navbar-fixed-top
+		.container-fluid
+			// Brand and toggle get grouped for better mobile display
+			.navbar-header.page-scroll
+				button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+					span.sr-only Toggle navigation
+					|									Menu 
+					i.fa.fa-bars
+				a.navbar-brand(href='/') The Avocado Net
+			// Collect the nav links, forms, and other content for toggling
+			#bs-example-navbar-collapse-1.collapse.navbar-collapse
+				ul.nav.navbar-nav.navbar-right
+					li
+						a(href='/myprofile') MY PROFILE
+					li
+						a(href='/addpost') ADD POST
+					li
+						a(href='/allpostings') ALL POSTINGS
+					li
+						a(href='/logout') LOGOUT

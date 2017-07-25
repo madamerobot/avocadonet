@@ -1,0 +1,34 @@
+doctype html
+html(lang='en')
+	head
+		meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0')
+		include navigation.pug
+		include references.pug
+		title Posting Detail Page
+	body
+		header.intro-header(style="background-image: url('/img/avocadobg2-green.png')")
+			.container
+				.row
+					.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+						.post-heading
+							h1#postingcontent=postingcontent
+							span.meta Posted by #{username} on #{date}
+		.container
+			.row
+				.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+					h3 Comments:
+					p
+					each hit in comments
+						h4=hit.comment
+						span.meta Written by user #{hit.userId}
+						br
+						p
+					hr
+					h3 Anything to add?
+					form.col.s12(action=`/comment/${postId}`, method='POST', autocomplete='off' id='form')
+						br
+						input#name.validate(type='text', name='comment')
+						br
+						br
+						button#seepreview.btn.btn-default(type='submit', name='submit') PUBLISH COMMENT
