@@ -16,11 +16,15 @@
 	background-color: white;
 }
 
-/*---FORMATTING--*/
+/*---GENERAL FORMATTING--*/
 
 * {
 	position: center;
 	font-family: Raleway;
+}
+
+body {
+	background-color: #7EDC95;
 }
 
 .background {
@@ -28,19 +32,12 @@
   background-image: -webkit-linear-gradient(110deg, #7EDC95 50%, #FFFFFF 50%);
 }
 
-body {
-	background-color: #7EDC95;
-}
-
 .main {
 	display: flex;
 	height: 100vh;
 }
 
-.navigation {
-	display: flex;
-}
-
+/*-----LOGO CONFIG----*/
 .logo {
 	width: 20%;
 	color: white;
@@ -57,6 +54,12 @@ body {
 .avologo{
 	height: 50vh;
 	padding: 20px;
+}
+
+/*-----NAV BAR AND UI ELEMENTS-----*/
+
+.navigation {
+	display: flex;
 }
 
 .links {
@@ -81,6 +84,15 @@ body {
 	padding-right: 15px;
 }
 
+.button {
+	background-color: black;
+	color: white;
+	font-size: 16px;
+	border-style: solid;
+	border-color: black;
+}
+
+/*-------MAIN BODY-----------*/
 .container {
 	/*background-color: pink;*/
 	width: 80%;
@@ -99,6 +111,7 @@ body {
 	text-align: center;
 }
 
+/*----------POSTINGS-------------*/
 .postbox {
 	width: 80%;
 	
@@ -124,30 +137,22 @@ body {
 }
 
 .onepost {
-	border-bottom: solid;
-	border-color: #7EDC95;
-	border-width: 1px;
-	padding-top: 5px;
-	padding-bottom: 15px;
 	padding-left: 25px;
 	padding-right: 25px;
-}
-
-.button {
-	background-color: black;
-	color: white;
-	font-size: 16px;
-	border-style: solid;
-	border-color: black;
 }
 
 .post {
 	font-size: 30px;
 	font-weight: 100;
 	font-style: italic;
+	/*border-style: solid;*/
 }
 
 .metadata {
 	font-size: 14px;
-
+	line-height: normal;
+	border-bottom: solid;
+	border-color: #7EDC95;
+	border-width: 1px;
+	padding-bottom: 20px;
 }
