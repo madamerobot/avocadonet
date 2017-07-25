@@ -2,12 +2,18 @@
 
 @font-face {
 	font-family: Pacifico;
-	src: url("../public/fonts/Pacifico.ttf");
+	src: url("https://fonts.googleapis.com/css?family=Pacifico");
 }
 
 @font-face {
 	font-family: Raleway;
-	src: url('https://fonts.googleapis.com/css?family=Raleway');
+	src: url("https://fonts.googleapis.com/css?family=Raleway");
+}
+
+/*---COLORS--*/
+
+.whitebg {
+	background-color: white;
 }
 
 /*---FORMATTING--*/
@@ -37,9 +43,15 @@ body {
 
 .logo {
 	width: 20%;
-	/*background-color: black;*/
 	color: white;
 	text-align: left;
+}
+
+.pacificologo {
+	font-family: Pacifico;
+	font-size: 20px;
+	color: black;
+	text-decoration: none;
 }
 
 .avologo{
@@ -51,6 +63,22 @@ body {
 	width: 80%;
 	/*background-color: yellow;*/
 	text-align: right;
+}
+
+.linkcopy {
+	text-decoration: none;
+	color: black;
+}
+
+.linkcopy:hover{
+	text-decoration: underline;
+}
+
+.menueitem {
+	/*background-color: green;*/
+	display: inline;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .container {
@@ -71,10 +99,55 @@ body {
 	text-align: center;
 }
 
+.postbox {
+	width: 80%;
+	
+	justify-content: center;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+
+	margin-top: 30px;
+	font-size: 40px;
+	border-style: solid;
+	border-color: #7EDC95;
+	border-width: 1px;
+}
+
+.postinner {
+	width: 60%;
+
+	justify-content: center;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.onepost {
+	border-bottom: solid;
+	border-color: #7EDC95;
+	border-width: 1px;
+	padding-top: 5px;
+	padding-bottom: 15px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
 .button {
 	background-color: black;
 	color: white;
 	font-size: 16px;
 	border-style: solid;
 	border-color: black;
+}
+
+.post {
+	font-size: 30px;
+	font-weight: 100;
+	font-style: italic;
+}
+
+.metadata {
+	font-size: 14px;
+
 }
