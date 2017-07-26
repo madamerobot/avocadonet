@@ -16,6 +16,14 @@
 	background-color: white;
 }
 
+.gradientbg {
+	background-image: linear-gradient(-90deg, #E5F674, #94FFD1);
+}
+
+.pink {
+	color: #f44265;
+}
+
 /*---GENERAL FORMATTING--*/
 
 * {
@@ -25,6 +33,10 @@
 
 body {
 	background-color: #7EDC95;
+}
+
+a {
+	color: black;
 }
 
 .background {
@@ -102,6 +114,16 @@ body {
 	padding-top: 30px;
 }
 
+.intro{
+	width: 80%;
+	text-align: left;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+
 .body {
 	width: 50%;
 	/*background-color: green;*/
@@ -119,16 +141,37 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 
-	margin-top: 30px;
 	font-size: 40px;
 	border-style: solid;
 	border-color: #7EDC95;
 	border-width: 1px;
 }
 
+.comments {
+	width: 80%;
+	text-align: left;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.comment {
+	margin-top: 10px;
+	font-size: 18px;
+	font-weight: 100;
+}
+
+.author {
+	color: black;
+	font-size: 14px;
+	font-weight: 100;
+}
+
 .newpost {
 	width: 60%;
-	height: 80vh;
+	height: 70vh;
 
 	justify-content: center;
 	text-align: center;
@@ -136,13 +179,9 @@ body {
 	margin-right: auto;
 }
 
-.gradientbg {
-	background-image: linear-gradient(-90deg, #E5F674, #94FFD1);
-}
-
 .postinput {
-	height: 80vh;
 	width: 100%;
+	height: 70vh;
 	box-sizing: border-box;
 	background-color: transparent;
 	border-style: none;
@@ -151,6 +190,7 @@ body {
 	color: white;
 	font-style: black italic;
 	word-break: break-word;
+	margin-top: 10vh;
 }
 
 .postinner {
@@ -160,6 +200,14 @@ body {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.postdetail {
+	font-style: italic;
+	font-weight: 100;
+	font-size: 30px;
+	color: black;
+	padding: 40px;
 }
 
 .onepost {
@@ -174,6 +222,18 @@ body {
 	/*border-style: solid;*/
 }
 
+.addcomment {
+	border-style: solid;
+	border-color: #7EDC95;
+	border-width: 1px;
+	width: 100%;
+	height: 10vh;
+	font-size: 18px;
+	font-weight: 100;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
 .metadata {
 	font-size: 14px;
 	line-height: normal;
@@ -181,4 +241,24 @@ body {
 	border-color: #7EDC95;
 	border-width: 1px;
 	padding-bottom: 20px;
+}
+
+.usericon {
+	font-family: Pacifico;
+	font-size: 30px;
+	color: black;
+	/*background-color: black;*/
+	display:block;
+
+	/*float:left;*/
+	/*padding: 5%;*/
+	width:auto;
+	height:auto;
+	border-radius:50%;
+
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	-khtml-border-radius: 50%;
+	text-align:center;
+	position: relative;
 }
