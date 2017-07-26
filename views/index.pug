@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Sign Up
+    title Home
     link(rel='stylesheet', type='text/css', href='style.css')
   body.background
     .main
@@ -50,19 +50,21 @@ html
           .row
             .login
               .pink You need to login to access your profile.
-              .welcome Welcome and happy to have you on board!
               form
                 p
-                  label(for='name') Choose username
+                  label(for='name') Your Name
                   br
                   input#Name(type='text', name='Name')
                   br
                 p
-                  label(for='password') Choose password
+                  label(for='password') Your Password
                   br
                   input#Password(type='text', name='Password')
                   br
                 input.button(type='submit', name='Login')
+              p
+                | No account yet? 
+                a(href='') Sign up.
           // closing second row
         // closing body div
       // closing container

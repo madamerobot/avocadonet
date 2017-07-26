@@ -1,25 +1,32 @@
 doctype html
-html(lang='en')
-	head
-		meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
-		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0')
-		include navigation.pug
-		include references.pug
-		title Add A Post
-	body#bootstrap-overrides
-		header.intro-header(style="background-image: url('/img/avocadobg2-green.png')")
-			.container
-				.row
-					.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
-						.site-heading
-							h1 Write a post
-							hr.small
-							form.col.s12(action='/addpost', method='POST', autocomplete='off' id='form')
-								label(for='name') What Do You Want To Say
-								br
-								br
-								input#name.validate(type='text', name='posting')
-								br
-								br
-								button.btn.btn-default#writepost(type="submit", name="submit") PUBLISH POST
-	include references_footer.pug
+html
+  head
+    title Add Post
+    link(rel='stylesheet', type='text/css', href='style.css')
+  body.whitebg
+    .main
+      .container
+        // SHOULD BE 80% OF SCREEN WIDTH
+        .navigation
+          .logo
+            a.pacificologo(href='index.html') The Avocado Net
+          .links
+            .menueitem
+              a.linkcopy(href='profile.html') My profile
+            .menueitem
+              a.linkcopy(href='addpost.html') Add post
+            .menueitem
+              a.linkcopy(href='allpostings.html') All postings
+            .menueitem
+              a.linkcopy(href='') Logout
+        // closing navigation
+        // SHOULD BE 80% OF SCREEN WIDTH, CENTERED
+        .intro Write a new post
+        .postbox.gradientbg
+          .postinner.newpost
+            form.linebreak
+              textarea#postinput.postinput(name='postinput', style='width:100%;height:60vh;')
+              input.button(type='submit')
+        // closing body div
+      // closing container
+    // closing main
