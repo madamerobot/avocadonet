@@ -1,7 +1,7 @@
 doctype html
 html
 	head
-		title Sign Up
+		title Home
 		link(rel='stylesheet', type='text/css', href='css/style.css')
 	body.background
 		.main
@@ -46,20 +46,21 @@ html
 										text.cls-3(transform='translate(44.32 243.29)') Avocado
 										text.cls-3(transform='translate(204.32 323.29)') Net
 										ellipse(cx='147.95', cy='305.27', rx='24.66', ry='20.5', transform='translate(-147.04 137.76) rotate(-34.55)')
-					// closing first row
 					.row
 						.login
-							.pink You need to login to access your profile.
-							.welcome Welcome and happy to have you on board!
-							form(action='/signup', method='POST', autocomplete='off' id='form')
+							.pink=message
+							form#signin(action='/', method='POST', autocomplete='off')
 								p
-									label(for='username') Choose username
+									label(for='username') Your Name
 									br
-									input#name(type='text', name='username')
+									input#name(type='text', name='username', placeholder="Username")
 									br
 								p
-									label(for='password') Choose password
+									label(for='password') Your Password
 									br
-									input#password(type='password', name='password')
+									input#password(type='password', name='password', placeholder="Password")
 									br
-								input.button#signup(type='submit', name='submit')
+								input.button(type="submit", name="login")
+							p
+								| No account yet? 
+								a(href='/signup') Sign up.

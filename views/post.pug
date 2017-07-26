@@ -1,46 +1,38 @@
 doctype html
 html
-  head
-    title Post Detail
-    link(rel='stylesheet', type='text/css', href='style.css')
-  body.whitebg
-    .main
-      .container
-        // SHOULD BE 80% OF SCREEN WIDTH
-        .navigation
-          .logo
-            a.pacificologo(href='index.html') The Avocado Net
-          .links
-            .menueitem
-              a.linkcopy(href='profile.html') My profile
-            .menueitem
-              a.linkcopy(href='addpost.html') Add post
-            .menueitem
-              a.linkcopy(href='allpostings.html') All postings
-            .menueitem
-              a.linkcopy(href='') Logout
-        // closing navigation
-        // SHOULD BE 80% OF SCREEN WIDTH, CENTERED
-        .intro Post by Daisy on Tue Jul 25 2017
-        .postbox.gradientbg
-          .postinner.postdetail
-            | "Hi, I think this is a very cool network. Finally I can meet people who are just as crazyyy as I am."
-        // closing body div
-        .comments
-          div Comments
-          .onecomment
-            .comment "OMG, I feel the same! Nice to meet you."
-            .author Written by Daisy
-          .onecomment
-            .comment "I think that is a bit superficial. There are really dumb Avo-fans out there."
-            .author Written by Rebecca
-          .onecomment
-            .comment "This one is clearly a troll, let's ignore her."
-            .author Written by Jaimee
-        .writecomment.comments
-          div Got something to add?
-          form.linebreak
-            textarea.addcomment
-            input.button(type='submit')
-      // closing container
-    // closing main
+	head
+		title Post Detail
+		link(rel='stylesheet', type='text/css', href='css/style.css')
+	body.whitebg
+		.main
+			.container
+				// SHOULD BE 80% OF SCREEN WIDTH
+				.navigation
+					.logo
+						a.pacificologo(href='/index') The Avocado Net
+					.links
+						.menueitem
+							a.linkcopy(href='/myprofile') My profile
+						.menueitem
+							a.linkcopy(href='/addpost') Add post
+						.menueitem
+							a.linkcopy(href='/allpostings') All postings
+						.menueitem
+							a.linkcopy(href='') Logout
+				// closing navigation
+				// SHOULD BE 80% OF SCREEN WIDTH, CENTERED
+				.intro Posted by #{username} on #{date}
+				.postbox.gradientbg
+					.postinner.postdetail=postingcontent
+				// closing body div
+				.comments
+					div Comments
+					.onecomment
+					each hit in comments
+						.comment=hit.comment
+						.author Written by user #{hit.userId}
+				.writecomment.comments
+					div Got something to add?
+					form.linebreak(action=`/comment/${postId}`, method='POST', autocomplete='off' id='form')
+						textarea.addcomment(name='comment')
+						input.button(type='submit')
