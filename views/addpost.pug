@@ -9,7 +9,7 @@ html
 				// SHOULD BE 80% OF SCREEN WIDTH
 				.navigation
 					.logo
-						a.pacificologo(href='/index') The Avocado Net
+						a.pacificologo(href='/myprofile') The Avocado Net
 					.links
 						.menueitem
 							a.linkcopy(href='/myprofile') My profile
@@ -18,11 +18,11 @@ html
 						.menueitem
 							a.linkcopy(href='/allpostings') All postings
 						.menueitem
-							a.linkcopy(href='') Logout
+							a.linkcopy(href='/logout') Logout
 				// SHOULD BE 80% OF SCREEN WIDTH, CENTERED
 				.intro Write a new post
 				.postbox.gradientbg
 					.postinner.newpost
 						form.linebreak(action='/addpost', method='POST', autocomplete='off' id='form')
-							textarea#postinput.postinput(style='width:100%;height:60vh;',name='posting')
+							textarea#postinput.postinput(style='width:100%;height:60vh;', name='posting')
 							input.button(type='submit', name='submit')

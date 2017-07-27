@@ -49,8 +49,9 @@ html
 					// closing first row
 					.row
 						.login
-							.pink You need to login to access your profile.
-							.welcome Welcome and happy to have you on board!
+							.pink=message
+							.welcome Welcome, welcome!
+							.welcome We are happy to have you on board.
 							form(action='/signup', method='POST', autocomplete='off' id='form')
 								p
 									label(for='username') Choose username

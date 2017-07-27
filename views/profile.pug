@@ -9,7 +9,7 @@ html
 				// SHOULD BE 80% OF SCREEN WIDTH
 				.navigation
 					.logo
-						a.pacificologo(href='/index') The Avocado Net
+						a.pacificologo(href='/myprofile') The Avocado Net
 					.links
 						.menueitem
 							a.linkcopy(href='/myprofile') My profile
@@ -18,11 +18,11 @@ html
 						.menueitem
 							a.linkcopy(href='/allpostings') All postings
 						.menueitem
-							a.linkcopy(href='') Logout
+							a.linkcopy(href='/logout') Logout
 				// closing navigation
 				// SHOULD BE 80% OF SCREEN WIDTH, CENTERED
 				.intro All postings by #{username}
-				.postbox
+				.postbox.greenborder
 					.postinner
 						p.onepost
 						each hit in posts
