@@ -23,7 +23,7 @@ html
 				// SHOULD BE 80% OF SCREEN WIDTH, CENTERED
 				.intro Posted by #{username} on #{date}
 				.postbox.gradientbg
-					.postinner.postdetail=postingcontent
+					.postinner.postdetail #{postingcontent}
 				// closing body div
 				.writecomment.comments
 					div Got anything to add?
@@ -36,5 +36,6 @@ html
 					each hit in comments
 						.comment #{hit.comment}
 						p
-						.author posted by user #{hit.userId} on Thu Jun 08 2017 16:55:50 GMT+0200 (CEST)
+						p=commentusername
+						.author posted by user #{hit.userId} on #{hit.createdAt}
 				

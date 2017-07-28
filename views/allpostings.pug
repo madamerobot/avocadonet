@@ -3,7 +3,7 @@ html
 	head
 		title All postings
 		link(rel='stylesheet', type='text/css', href='/css/style.css')
-	body.whitebg
+		body.whitebg
 		.main
 			.container
 				// SHOULD BE 80% OF SCREEN WIDTH
@@ -24,11 +24,10 @@ html
 				.postbox.greenborder
 					.postinner
 						p.onepost
-							.usericon
-							each hit in firstletter
-								p=hit
-							each hit in allpostings
-								p=hit.firstletter
-								p.post=hit.post
-								p.metadata
-									a(href=`/posts/${hit.id}`) Posted by #{hit.user.name} at #{hit.createdAt}
+						each hit in allpostings
+							p.usericon
+								a.usericon(href=`/profile/${hit.user.name}`) #{hit.user.name}:
+							p.post "#{hit.post}"
+							p.metadata 
+								a(href=`/posts/${hit.id}`) Posted on #{hit.createdAt}
+

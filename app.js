@@ -131,6 +131,8 @@ app.post('/signup', function(req, res){
 
 	console.log("I am receiving following user credentials: "+inputname+" "+inputpassword);
 
+
+
 	bcrypt.hash(inputpassword, null, null, function(err, hash){
 		if (err){
 			console.log(err);
@@ -184,7 +186,14 @@ app.post('/addpost', function(req, res) {
 app.get('/posts/:postId', function(req, res){
 	
 	const postId = req.params.postId;
-	console.log('This is what I receive as postId in the postId get request: '+postId);
+	// console.log('This is what I receive as postId in the postId get request: '+postId);
+	
+	var postingcontent = "";
+	var comments = [];
+	// var commentusername = "";
+	var username = "";
+	var date;
+	var commentinfo = [];
 
 	Post.findOne({
 		where: {
@@ -198,11 +207,38 @@ app.get('/posts/:postId', function(req, res){
 		}]
 	})
 	.then(function(post){
-		console.log(JSON.stringify(post, null, 2));
-		console.log(post.comments);
-		console.log('Userdata: '+post.user.name);
-		res.render("post", {postingcontent: post.post, comments: post.comments, postId: postId, username: post.user.name, date: post.createdAt});
+		
+		postingcontent = post.post;
+		comments = post.comments.reverse();
+		username = post.user.name;
+		date = post.createdAt;
+
+		var commentsinfo = [];
+
+		var commentusername;
+		var commentcreatedAt;
+
+		for (var i=0; i < comments.length; i++){
+
+			commentcreatedAt = comments[i].createdAt;
+			// commentsinfo.push(commentcreatedAt);
+
+			User.findOne({
+				where: {
+					id: comments[i].userId
+				}
+			}).then(function(user){				
+				commentusername = user.name;
+				console.log('name: '+commentusername);
+				// commentinfo.push(commentusername);
+			})
+		}
 	})
+	.then(function(){
+		console.log('----->'+commentinfo);
+		res.render("post", {postingcontent: postingcontent, comments: comments, 
+			postId: postId, username: username, date: date});
+	});
 });
 
 //ROUTE 05: REDIRECTING COMMENT CREATION TO SEPERATE ROUTE, 
@@ -272,7 +308,8 @@ app.get('/myprofile', function (req, res){
 				name: user.name
 			}
 		}).then(function(user){
-			res.render("profile", {posts: user.posts, username: user.name});
+			var mostrecent = user.posts.reverse();
+			res.render("profile", {posts: mostrecent, username: user.name});
 		})
 	}
 })
@@ -288,14 +325,8 @@ app.get('/allpostings', function (req, res) {
 			include: [User]
 		}).then(function(allpostings){	
 			// console.log(JSON.stringify(allpostings, null, 2));
-			var firstletter = [];
-			for (var i=0; i<allpostings.length; i++){
-				var username = allpostings[i].user.name;
-				var splitfirstletter = username.split("");
-				console.log(JSON.stringify('>>>.......'+splitfirstletter[0]));
-				firstletter.push(splitfirstletter[0]);			
-			}
-			res.render("allpostings", {allpostings: allpostings, firstletter: firstletter});
+			var mostrecent = allpostings.reverse();
+			res.render("allpostings", {allpostings: mostrecent});
 		});
 	}
 });

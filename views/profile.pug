@@ -21,12 +21,12 @@ html
 							a.linkcopy(href='/logout') Logout
 				// closing navigation
 				// SHOULD BE 80% OF SCREEN WIDTH, CENTERED
-				.intro All postings by #{username}
+				.intro #{username} Profile
 				.postbox.greenborder
 					.postinner
 						p.onepost
 						each hit in posts
-							p.post=hit.post
+							p.post "#{hit.post}"
 							p.metadata
-								a(href=`/posts/${hit.id}`) Created on #{hit.createdAt}
+								a(href=`/posts/${hit.id}`) Posted on #{hit.createdAt}
 							p
