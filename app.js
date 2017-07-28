@@ -287,8 +287,15 @@ app.get('/allpostings', function (req, res) {
 		Post.findAll({
 			include: [User]
 		}).then(function(allpostings){	
-			console.log(JSON.stringify(allpostings, null, 2));
-			res.render("allpostings", {allpostings: allpostings});
+			// console.log(JSON.stringify(allpostings, null, 2));
+			var firstletter = [];
+			for (var i=0; i<allpostings.length; i++){
+				var username = allpostings[i].user.name;
+				var splitfirstletter = username.split("");
+				console.log(JSON.stringify('>>>.......'+splitfirstletter[0]));
+				firstletter.push(splitfirstletter[0]);			
+			}
+			res.render("allpostings", {allpostings: allpostings, firstletter: firstletter});
 		});
 	}
 });
