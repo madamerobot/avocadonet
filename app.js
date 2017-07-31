@@ -1,8 +1,13 @@
 //---------CONFIG AND LIBRARIES-----------------
 
+//Config with Postgres credentials
+const config = require('./config');
+
 //Requiring Sequelize library & initiating db connection
 const Sequelize = require('sequelize');
-const sequelize= new Sequelize('postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/avocadonet');
+const username = config.config.username;
+const password = config.config.password;
+const sequelize= new Sequelize('postgres://' + username+ ':' + password + '@localhost/avocadonet');
 
 //Requiring express library
 const express = require('express');
