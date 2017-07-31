@@ -129,23 +129,31 @@ app.post('/signup', function(req, res){
 	var inputname = req.body.username;
 	var inputpassword = req.body.password;
 
-	console.log("I am receiving following user credentials: "+inputname+" "+inputpassword);
-
-
-
-	bcrypt.hash(inputpassword, null, null, function(err, hash){
-		if (err){
-			console.log(err);
-		} else {
-			User.create({
-				name: inputname,
-				password: hash
-			}).then( () => {
-				res.redirect('/?message=' + encodeURIComponent("Your user got successfully created. Log in below."));
-			});
-		}
-	});
+	User.findOne({
+			where: {
+				name: inputname
+			}
+	})
+	.then(function(user){
+			if (user) {
+				res.redirect('/?message=' + encodeURIComponent('Username already exists. Please choose a different one.'));
+			} else {
+				bcrypt.hash(inputpassword, null, null, function(err, hash){
+					if (err){
+						console.log(err);
+					} else {
+							User.create({
+							name: inputname,
+							password: hash
+							}).then( () => {
+								res.redirect('/?message=' + encodeURIComponent("Your user got successfully created. Log in below."));
+							});
+					}
+				}); /* closing bcrypt */
+			}
+	})
 })
+
 
 //ROUTE 03: WRITING A NEW POST---------------------
 app.get('/addpost', function (req, res) {
