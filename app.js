@@ -322,6 +322,9 @@ app.get('/myprofile', function (req, res){
 			}
 		}).then(function(user){
 			var mostrecent = user.posts.reverse();
+
+			console.log('----->'+user.name);
+
 			res.render("profile", {posts: mostrecent, username: user.name});
 		})
 	}
