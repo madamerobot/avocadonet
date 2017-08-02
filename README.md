@@ -1,5 +1,5 @@
 <h1>Introduction:</h1>
-<p>Avocado Net is a tongue-in-cheek prototype for a single-purpose blog-application: To connect over Avocados.<br>
+<p>Avocado Net is a tongue-in-cheek prototype for a single-purpose blog-application: To connect over.<br>
 
 <h1>Build:</h1>
 <p>The page is build with CSS and HTML for the front-end and uses Sequelize and Postgres for the back-end.<br>
@@ -16,13 +16,13 @@
 
 <h1>Screenshots:</h1>
 
-![Landing Page](screenshots/landingpage.png?raw=true "Landing Page")
+![Landing Page](img/screenshots/landingpage.png?raw=true "Landing Page")
 
-![Profile](screenshots/profile.png?raw=true "Profile")
+![Profile](img/screenshots/profile.png?raw=true "Profile")
 
 ![New Post](img/screenshots/createpost.png?raw=true "New Post")
 
-![Post Detail](screenshots/postdetail.png?raw=true "Post Detail")
+![Post Detail](img/screenshots/postdetail.png?raw=true "Post Detail")
 
 <h1>License:</h1>
 <p>The MIT License</p>
