@@ -16,13 +16,13 @@
 
 <h1>Screenshots:</h1>
 
-![Landing Page](img/screenshots/landingpage.png?raw=true "Landing Page")
+![Landing Page](screenshots/landingpage.png?raw=true "Landing Page")
 
-![Profile](img/screenshots/profile.png?raw=true "Profile")
+![Profile](screenshots/profile.png?raw=true "Profile")
 
 ![New Post](img/screenshots/createpost.png?raw=true "New Post")
 
-![Post Detail](img/screenshots/postdetail.png?raw=true "Post Detail")
+![Post Detail](screenshots/postdetail.png?raw=true "Post Detail")
 
 <h1>License:</h1>
 <p>The MIT License</p>
