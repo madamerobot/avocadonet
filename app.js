@@ -126,7 +126,9 @@ app.post('/', function (req, res) {
 
 //ROUTE 02: CREATING NEW USER IN SIGNUP-------------
 app.get('/signup', function(req, res){
-	res.render("signup");
+
+	var message = "Great to have you on board!";
+	res.render("signup", {message: message);
 })
 
 app.post('/signup', function(req, res){
