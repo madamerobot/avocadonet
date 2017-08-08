@@ -3,34 +3,34 @@ html
 	head
 		title Post Detail
 		link(rel='stylesheet', type='text/css', href='/css/style.css')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
 	body.whitebg
-		.main
-			.container
-				// SHOULD BE 80% OF SCREEN WIDTH
-				.navigation
+		.container
+			// SHOULD BE 80% OF SCREEN WIDTH
+			.navigation
+				.links
 					.logo
 						a.pacificologo(href='/myprofile') The Avocado Net
-					.links
-						.menueitem
-							a.linkcopy(href='/myprofile') My profile
-						.menueitem
-							a.linkcopy(href='/addpost') Add post
-						.menueitem
-							a.linkcopy(href='/allpostings') All postings
-						.menueitem
-							a.linkcopy(href='/logout') Logout
-				// closing navigation
-				// SHOULD BE 80% OF SCREEN WIDTH, CENTERED
-				.intro Posted by #{username} on #{date}
-				.postbox.gradientbg
-					.postinner.postdetail #{postingcontent}
-				// closing body div
-				.writecomment.comments
+					.menueitem
+						a.linkcopy(href='/myprofile') My profile
+					.menueitem
+						a.linkcopy(href='/addpost') Add post
+					.menueitem
+						a.linkcopy(href='/allpostings') All postings
+					.menueitem
+						a.linkcopy(href='/logout') Logout
+			// closing navigation
+			// SHOULD BE 80% OF SCREEN WIDTH, CENTERED
+			.postintro Posted by #{username} on #{date}
+			.postbox
+				.postinner.postdetail.gradientbg #{postingcontent}
+			// closing body div
+			.comments
+				.commentarea
 					div Got anything to add?
 					form.linebreak(action=`/comment/${postId}`, method='POST', autocomplete='off' id='form')
 						textarea.addcomment(name='comment')
-						input.button(type='submit')
-				.comments
+						input.button(type='submit' value='Post comment')
 					div.line Comments
 					.onecomment
 					each hit in comments

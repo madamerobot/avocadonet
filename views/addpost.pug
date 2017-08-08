@@ -3,26 +3,26 @@ html
 	head
 		title Add Post
 		link(rel='stylesheet', type='text/css', href='css/style.css')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
 	body.whitebg
-		.main
-			.container
-				// SHOULD BE 80% OF SCREEN WIDTH
-				.navigation
+		.container
+			// SHOULD BE 80% OF SCREEN WIDTH
+			.navigation
+				.links
 					.logo
 						a.pacificologo(href='/myprofile') The Avocado Net
-					.links
-						.menueitem
-							a.linkcopy(href='/myprofile') My profile
-						.menueitem
-							a.linkcopy(href='/addpost') Add post
-						.menueitem
-							a.linkcopy(href='/allpostings') All postings
-						.menueitem
-							a.linkcopy(href='/logout') Logout
-				// SHOULD BE 80% OF SCREEN WIDTH, CENTERED
-				.intro Write a new post
-				.postbox.gradientbg
-					.postinner.newpost
-						form.linebreak(action='/addpost', method='POST', autocomplete='off' id='form')
-							textarea#postinput.postinput(style='width:100%;height:60vh;', name='posting')
-							input.button(type='submit', name='submit')
+					.menueitem
+						a.linkcopy(href='/myprofile') My profile
+					.menueitem
+						a.linkcopy(href='/addpost') Add post
+					.menueitem
+						a.linkcopy(href='/allpostings') All postings
+					.menueitem
+						a.linkcopy(href='/logout') Logout
+			// SHOULD BE 80% OF SCREEN WIDTH, CENTERED
+			.intro Write a new post
+			.postbox
+				.newpost.gradientbg
+					form(action='/addpost', method='POST', autocomplete='off' id='form')
+						textarea#postinput.postinput(style='width:100%;height:60vh;', name='posting')
+						input.button(type='submit', name='submit')

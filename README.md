@@ -1,5 +1,5 @@
 <h1>Introduction:</h1>
-<p>Avocado Net is a tongue-in-cheek prototype for a single-purpose blog-application: To connect over.<br>
+<p>Avocado Net is a tongue-in-cheek prototype for a single-purpose blog-application: To connect over Avocados.<br>
 
 <h1>Build:</h1>
 <p>The page is build with CSS and HTML for the front-end and uses Sequelize and Postgres for the back-end.<br>

@@ -3,14 +3,14 @@ html
 	head
 		title All postings
 		link(rel='stylesheet', type='text/css', href='/css/style.css')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
 		body.whitebg
-		.main
 			.container
 				// SHOULD BE 80% OF SCREEN WIDTH
 				.navigation
-					.logo
-						a.pacificologo(href='/myprofile') The Avocado Net
 					.links
+						.logo
+							a.pacificologo(href='/myprofile') The Avocado Net
 						.menueitem
 							a.linkcopy(href='/myprofile') My profile
 						.menueitem
@@ -21,8 +21,8 @@ html
 							a.linkcopy(href='/logout') Logout
 				// SHOULD BE 80% OF SCREEN WIDTH, CENTERED
 				.intro All postings by other Avocadonados
-				.postbox.greenborder
-					.postinner
+				.postbox
+					.postinner.greenborder
 						p.onepost
 						each hit in allpostings
 							p.usericon

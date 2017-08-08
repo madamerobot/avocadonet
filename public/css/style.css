@@ -1,13 +1,146 @@
+/*DEBUGGING*/
+
+* {
+/*	border-style: solid;
+	border-color: red;
+	border-width: 1px;*/
+}
+
+/*---RESPONSIVENESS----*/
+
+/*Linebreak on mobile*/
+@media only screen and (max-width:768px){
+
+/*	* {
+		font-family: Raleway-Light !important;
+	}*/
+
+	.links {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: center !important;
+		    -ms-flex-pack: center !important;
+		        justify-content: center !important;
+		margin: 0% !important;
+	}
+
+	.logo {
+		width: 100%;
+		text-align: center !important;
+		margin: 0% !important;
+	}
+
+	.pacificlogo {
+	}
+
+	.menueitem {
+		width: 100%;
+		background-color: rgba(148, 255, 209, 0.5);
+		margin-top: 1% !important;
+		margin-bottom: 1% !important;
+		margin-left: 3% !important;
+		margin-right: 3% !important;
+		padding-top: 1% !important;
+		padding-bottom: 1% !important;
+	}
+
+	.intro {
+		width: 100%;
+		padding-left: 5% !important;
+		padding-right: 5% !important;
+		padding-bottom: 5% !important;
+		text-align: center !important;
+		font-size: 26px;
+		font-family: Raleway-Light !important;
+	}
+
+	.greenborder {
+		padding: 0%;
+	}
+
+	.postinner {
+		width: 100% !important;
+	}
+
+	.newpost {
+		width: 100% !important;
+	}
+
+	.postinput {
+		width: 100% !important;
+	}
+
+	.navigation {
+		margin-bottom: 5% !important;
+		-webkit-box-align: center !important;
+		    -ms-flex-align: center !important;
+		        align-items: center !important;
+		font-size: 26px;
+	}
+
+	.commentarea {
+		width: 100% !important;
+		font-size: 26px !important;
+		font-family: Raleway-Light !important;
+	}
+
+	.button {
+		font-size: 26px !important;
+		font-family: Raleway-Light !important;
+	}
+
+	.comments {
+		font-size: 26px !important;
+		font-family: Raleway-Light !important;
+		text-align: center !important;
+	}
+
+	.comment {
+		font-size: 26px !important;
+		font-family: Raleway-Light !important;
+	}
+
+	.author {
+		font-size: 16px !important;
+		font-family: Raleway-Light !important;
+	}
+
+	.postintro {
+		font-size: 16px !important;
+		font-family: Raleway-Light !important;
+		text-align: center !important;
+		width: 100%;
+		padding-left: 5% !important;
+		padding-right: 5% !important;
+		padding-bottom: 5% !important;
+		text-align: center !important;
+	}
+
+}
+
 /*----FONTS----*/
 
-@font-face {
-	font-family: Pacifico;
-	src: url("https://fonts.googleapis.com/css?family=Pacifico");
+@font-face { 
+	font-family: "Pacifico script=latin rev=2"; font-style: normal; font-weight: 400; 
+	src: url("https://fonts.gstatic.com/s/pacifico/v9/Q_Z9mv4hySLTMoMjnk_rCXYhjbSpvc47ee6xR_80Hnw.woff2") 
+	format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, 
+	+2212, U+2215; 
+}
+
+@font-face { 
+	font-family: "Raleway script=latin rev=2"; font-style: normal; font-weight: 400; 
+	src: url("https://fonts.gstatic.com/s/raleway/v11/QAUlVt1jXOgQavlW5wEfxQLUuEpTyoUstqEm5AMlJo4.woff2") 
+	format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, 
+	U+2212, U+2215; 
 }
 
 @font-face {
-	font-family: Raleway;
-	src: url("https://fonts.googleapis.com/css?family=Raleway");
+	font-family: Raleway-Light;
+	src: url('https://fonts.googleapis.com/css?family=Raleway:300i,400');
 }
 
 /*---COLORS--*/
@@ -17,7 +150,10 @@
 }
 
 .gradientbg {
-	background-image: linear-gradient(-90deg, #E5F674, #94FFD1);
+	background-image: -webkit-gradient(linear, left top, right top, from(#E5F674), to(#94FFD1));
+	background-image: -webkit-linear-gradient(left, #E5F674, #94FFD1);
+	background-image: -o-linear-gradient(left, #E5F674, #94FFD1);
+	background-image: linear-gradient(90deg, #E5F674, #94FFD1);
 }
 
 .pink {
@@ -28,17 +164,11 @@
 
 * {
 	position: center;
-	font-family: Raleway;
-	/*border-style: solid;*/
+	font-family: 'Raleway script=latin rev=2', sans-serif;
 }
 
 body {
 	background-color: #7EDC95;
-	margin: 0;
-}
-
-html, body {
-    height: 100%;
 }
 
 a {
@@ -48,19 +178,6 @@ a {
 .background {
   background-color: #FFFFFF;
   background-image: -webkit-linear-gradient(110deg, #7EDC95 50%, #FFFFFF 50%);
-}
-
-.main {
-/*	height: 100%;
-    padding: 0;
-    margin: 0;*/
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .line {
@@ -77,28 +194,160 @@ a {
 }
 
 .pacificologo {
-	font-family: Pacifico;
+	font-family: 'Pacifico script=latin rev=2', sans-serif !important;
 	font-size: 20px;
 	color: black;
 	text-decoration: none;
 }
 
-.avologo{
-	height: 50vh;
-	padding: 20px;
-	justify-content: center;
+/*--LANDING PAGE--*/
+
+/* .container -> flex container, flex direction column, see below */
+
+.landingcontainer {
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+
+	height: 100vh;
+    padding: 0;
+    margin: 0;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
+
+/* .center -> flex item, arranged center*/
+
+.center {
+	
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+
+	-webkit-box-orient: horizontal;
+
+	-webkit-box-direction: normal;
+
+	    -ms-flex-direction: row;
+
+	        flex-direction: row;
+	width: auto;
+}
+
+.avologo{
+	min-width: 302px;
+	max-width: 302px;
+	margin-top: 5%;
+}
+
+.login {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	/*flex-flow: column;*/
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+#signin {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column;
+	        flex-flow: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	text-align: center;
+}
+
+.signup {
+	text-align: center;
+}
+
+.field {
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.button {
+	/*margin-top: 5%;*/
+}
+
+.disclaimer {
+	text-align: center;
+	margin-top: 5%;
+}
+
 
 /*-----NAV BAR AND UI ELEMENTS-----*/
 
+/*FLEX CONTAINER FOR .LINKS AND .LOGO*/
 .navigation {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	width: 100%;
+	padding-top: 2%;
+	margin-bottom: 2%;
 }
 
+.logo {
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+	margin-left: 10%;
+}
+
+/*PARENT FOR .MENUEITEM AND .LINKCOPY*/
 .links {
-	width: 80%;
-	/*background-color: yellow;*/
-	text-align: right;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
+	display: flex;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	margin-right: 10%;
+}
+
+.menueitem {
+	padding-left: 15px;
+	padding-right: 15px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .linkcopy {
@@ -110,12 +359,7 @@ a {
 	text-decoration: underline;
 }
 
-.menueitem {
-	/*background-color: green;*/
-	display: inline;
-	padding-left: 15px;
-	padding-right: 15px;
-}
+/*---*/
 
 .button {
 	background-color: black;
@@ -130,65 +374,87 @@ a {
 	padding-bottom: 5px;
 }
 /*-------MAIN BODY-----------*/
+
+/*CONTAINER FOR .BODY*/
 .container {
-	/*background-color: pink;*/
-	width: 80%;
-	justify-content: center;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 30px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: row;
+	        flex-flow: row;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 
 .intro{
+	padding-top: 2%;
+	padding-bottom: 1%;
+	padding-left: 20%;
 	width: 80%;
-	text-align: left;
-	justify-content: center;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 40px;
-	margin-bottom: 10px;
+}
+
+.postintro{
+	padding-top: 2%;
+	padding-bottom: 1%;
+	padding-left: 20%;
+	width: 80%;
 }
 
 .body {
-	width: 50%;
-	/*background-color: green;*/
-	justify-content: center;
-	margin-left: auto;
-	margin-right: auto;
 	text-align: center;
 }
 
 /*----------POSTINGS-------------*/
 .postbox {
-	width: 80%;	
-	justify-content: center;
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-
 	font-size: 40px;
+	width: 85%;
+
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 
 .greenborder {
 	border-style: solid;
 	border-color: #7EDC95;
 	border-width: 1px;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
 .comments {
-	width: 80%;
+	width: 85%;
 	text-align: left;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 30px;
 	margin-bottom: 10px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.commentarea {
+	width: 70%;
 }
 
 .comment {
 	margin-top: 10px;
 	font-size: 16px;
-	/*font-weight: 400;*/
 }
 
 .author {
@@ -202,19 +468,18 @@ a {
 }
 
 .newpost {
-	width: 60%;
 	height: 70vh;
-
-	justify-content: center;
+	width: 60%;
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
 .postinput {
-	width: 100%;
+	width: 60%;
 	height: 70vh;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	background-color: transparent;
 	border-style: none;
 	font-size: 40px;
@@ -230,20 +495,20 @@ a {
 }
 
 .postinner {
-	width: 60%;
+	-webkit-box-pack: center;
 
-	justify-content: center;
+	    -ms-flex-pack: center;
+
+	        justify-content: center;
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+	width: 60%;
 }
 
+/*Defining gradient field holding posting copy*/
 .postdetail {
-	font-style: italic;
-	font-weight: 100;
 	font-size: 30px;
-	color: black;
 	padding: 60px;
+	font-family: Raleway-Light;
 }
 
 .onepost {
@@ -253,9 +518,7 @@ a {
 
 .post {
 	font-size: 30px;
-	font-weight: 100;
-	font-style: italic;
-	/*border-style: solid;*/
+	font-family: Raleway-Light;
 }
 
 .addcomment {
@@ -307,10 +570,8 @@ a {
 
 #name {
 	font-size: 14px;
-	/*margin-top: 15px;*/
 }
 
 #password {
 	font-size: 14px;
-	/*margin-top: 15px;*/
 }
