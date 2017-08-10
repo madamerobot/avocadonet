@@ -22,8 +22,6 @@
 
 ![New Post](img/screenshots/createpost.png?raw=true "New Post")
 
-![Post Detail](img/screenshots/postdetail.png?raw=true "Post Detail")
-
 <h1>License:</h1>
 <p>The MIT License</p>
 
