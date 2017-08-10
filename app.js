@@ -39,6 +39,7 @@ app.set('views', './views');
 app.set('view engine', 'pug');
 
 app.use(express.static('public'));
+app.use(express.static('img'));
 
 //Requiring postgres library
 const pg = require('pg');
