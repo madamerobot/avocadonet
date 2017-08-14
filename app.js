@@ -129,7 +129,7 @@ app.post('/', function (req, res) {
 app.get('/signup', function(req, res){
 
 	var message = "Great to have you on board!";
-	res.render("signup", {message: message);
+	res.render("signup", {message: message});
 })
 
 app.post('/signup', function(req, res){

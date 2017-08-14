@@ -158,6 +158,8 @@
 
 .pink {
 	color: #f44265;
+	width: 100%;
+	text-align: center;
 }
 
 /*---GENERAL FORMATTING--*/
@@ -255,6 +257,8 @@ a {
 	display: -ms-flexbox;
 	display: flex;
 	/*flex-flow: column;*/
+	flex-direction: row;
+	flex-wrap: wrap;
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
