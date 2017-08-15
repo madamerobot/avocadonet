@@ -523,6 +523,7 @@ a {
 .post {
 	font-size: 30px;
 	font-family: Raleway-Light;
+	word-break: break-all; 
 }
 
 .addcomment {
